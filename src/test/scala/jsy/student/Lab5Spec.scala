@@ -19,6 +19,11 @@ class Lab5Spec(lab5: Lab5Like) extends FlatSpec {
      assertResult((42,gold1)) { dowith(42) }
   }
 
+  "let's get some" should "information" in {
+    val e=parse("const x = { f: { }, g: 0 };\n(<{ f: { h: number } }>x).f.h")
+
+  }
+
   "mapWith(List)" should "map the elements of a list in a DoWith" in {
     val l = List(1, 2, 3, 4, 5)
     val r1 = l.map { i => i + 1 }
